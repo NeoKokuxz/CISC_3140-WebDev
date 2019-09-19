@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+    <head>
+        <title>APOD</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        <style>
+            #speed-container {
+                position: fixed;
+                right: 2em;
+                bottom: 0;
+            }
+            h1, h2, #start {
+                color: black;
+            }
+            table {
+                background-color: white;
+                margin-bottom: 2em;
+            }
+        </style>
+    </head>
+    <body>
+        
+        <header class="row">
+                        <h1>CISC3140 API Test by Neo</h1>
+        </header>
+        <div class="container">
+            <main>
+                <section>
+                    <h1 class="center-align">Picture Of the Day</h1>
+                    <div class="row">
+                        <div class="col s12 m8 offset-m2">
+                            <div id="apod" class="card">
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+        <script src="nasa.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/p5.js"></script>
+    </body>
+</html>
