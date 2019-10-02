@@ -1,0 +1,67 @@
+////////////////////////////////////////////////////////////////////////////////////////
+//Part 1 Check for palindrome
+//Define both quote l1 will be palindrome and l isn't
+
+(define l1 '(1 1 3 1 1))
+(define l '(1 2 3 4) )
+
+//define a function called deep-reverse
+(define (deep-reverse l) 
+
+  //Check condition if the list is list
+  (if (list? l) 
+  
+      //reverse the list
+      (reverse (map deep-reverse l)) l))
+      
+//Define the function to accept list
+(define (pdrome l)
+
+  //Use the list is equal to it's reverse
+  (equal? l (deep-reverse l)))
+  //#t if it's a palinedrome
+  //#f if it isn't
+
+//Test Case
+//   (pdrome l1)
+//=> #t
+//   (pdrome l)
+//=> #f
+
+////////////////////////////////////////////////////////////////////////////////////////
+//Part 2 Merge 2 sorted lists into one sorted list
+//Define both sorted lists
+(define list1 '(1 2 5 8 9))
+(define list2 '(3 4 6 7))
+
+//Define the merge
+(define (merge list1 list2)
+  //cond - ondition
+  //Check if list 1 is empty
+  (cond ((null? list1) list2)
+        //Check if list 2is empty
+        ((null? list2) list1)
+        //Compare the first element of list1 vs list2
+        ((>= (car list1) (car list2))
+        
+         //if list 1's first element bigger than list2's first element
+         //Merge the first element in list 2 then call recursive merge again
+         //else use the first element in list 1 and call recursive merge
+         //the first element in either list1 or list2 + rest of the list 1 or list 2 depends on which element is smaller
+         //Then compare the 2nd element again and again until there's nothing left.
+         (cons (car list2) (merge list1 (cdr list2))))
+        (else
+         (cons (car list1) (merge (cdr list1) list2)))))
+         
+//Test Case
+//Check if either list is empty.
+//   (null? list1)
+//=> #f
+//   (null? list2)
+//=> #f
+//merge them together 
+//   (merge list1 list2)
+//=> (1 2 3 4 5 6 7 8 9)
+   
+
+////////////////////////////////////////////////////////////////////////////////////////
