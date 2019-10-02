@@ -1,6 +1,9 @@
 ////////////////////////////////////////////////////////////////////////////////////////
+
+* In order for the scheme code to run, delete all the comments on the code start with // *
+
+////////////////////////////////////////////////////////////////////////////////////////
 //Part 1 Check for palindrome
-//Define both quote l1 will be palindrome and l isn't
 
 (define l1 '(1 1 3 1 1))
 (define l '(1 2 3 4) )
@@ -19,8 +22,6 @@
 
   //Use the list is equal to it's reverse
   (equal? l (deep-reverse l)))
-  //#t if it's a palinedrome
-  //#f if it isn't
 
 //Test Case
 //   (pdrome l1)
@@ -65,3 +66,32 @@
    
 
 ////////////////////////////////////////////////////////////////////////////////////////
+Submission should include good documentation practices, some of these elements include:
+The specific language variation and version to compile the code
+A: using online scheme, https://repl.it/languages/scheme 
+Description of the method objective
+A: 
+  p1: 
+  //Define both quote l1 will be palindrome and l isn't
+  //define a function called deep-reverse
+  //Check condition if the list is list
+  //reverse the list
+  //Define the function to accept list
+  //Use the list is equal to it's reverse
+  p2:
+  //Define the merge
+  //cond - ondition
+  //Check if list 1 is empty
+  //if list 1's first element bigger than list2's first element
+  //Merge the first element in list 2 then call recursive merge again
+  //else use the first element in list 1 and call recursive merge
+  //the first element in either list1 or list2 + rest of the list 1 or list 2 depends on which element is smaller
+  //Then compare the 2nd element again and again until there's nothing left.
+Description of input parameters specification for each function
+A: l for list.
+Example of calling each function with properly formatted inputs
+A: under the codes, test cases. 
+Comment your logic within the function
+A: comment on top of the code. 
+
+
