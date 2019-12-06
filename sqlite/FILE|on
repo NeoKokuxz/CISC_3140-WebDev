@@ -1,0 +1,4 @@
+(1) near "5518": syntax error
+(17) statement aborts at 25: [SELECT name FROM "main".sqlite_master  WHERE type IN ('table','view')   AND name NOT LIKE 'sqlite_%'   AND name LIKE ?1 ORDER BY 1] database schema has changed
+(1) near "5518": syntax error
+(17) statement aborts at 25: [SELECT name FROM "main".sqlite_master  WHERE type IN ('table','view')   AND name NOT LIKE 'sqlite_%'   AND name LIKE ?1 ORDER BY 1] database schema has changed
