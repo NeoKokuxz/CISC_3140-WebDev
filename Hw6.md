@@ -1,4 +1,5 @@
 Part 1:
+</br>
 //Start 3140.db
 ~/desktop/cisc_3140/sqlite $sqlite3 3140.db
 SQLite version 3.24.0 2018-06-04 14:10:15
@@ -174,7 +175,7 @@ enthustic = 5
 sqlite> .exit   
 .exit
 ~/desktop/cisc_3140/sqlite $
-
+</br>
 
 Part 2: 
 Would you prepare differently in the future? How so?
