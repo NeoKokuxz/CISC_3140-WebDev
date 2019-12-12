@@ -1,0 +1,46 @@
+Neo Chen					HW7
+
+[nchen@sol41 ~]$ script
+Script started, file is typescript
+[nchen@sol41 ~]$ mkdir 3140web
+[nchen@sol41 ~]$ cd 3140web	
+[nchen@sol41 3140web]$ mkdir HW7
+[nchen@sol41 3140web]$ cd HW7
+[nchen@sol41 HW7]$ vim test.txt
+[nchen@sol41 HW7]$ cd
+[nchen@sol41 ~]$ mkdir subversion
+[nchen@sol41 ~]$ cd subversion
+[nchen@sol41 subversion]$ svnadmin create repos
+[nchen@sol41 subversion]$ cd
+[nchen@sol41 ~]$ pwd
+/users1/st/nchen
+[nchen@sol41 ~]$ svn import 3140web/HW7 file:///users1/st/nchen/subversion/repos -m "initial report"
+Adding         3140web/HW7/test.txt
+
+Committed revision 1.
+[nchen@sol41 ~]$ svn checkout file:///users1/st/nchen/subversion/repos HW7
+A    HW7/test.txt
+Checked out revision 1.
+[nchen@sol41 ~]$ cd HW7
+[nchen@sol41 HW7]$ vim test.txt
+[nchen@sol41 HW7]$ svn diff
+Index: test.txt
+===================================================================
+--- test.txt   (revision 1)
++++ test.txt   (working copy)
+@@ -1 +1,2 @@
+ Original Text
++Added Text
+[nchen@sol41 HW7]$ svn commit
+Sending        test.txt
+Transmitting file data .
+Committed revision 2.
+[nchen@sol41 HW7]$ svn update
+Updating '.':
+At revision 2.
+[nchen@sol41 HW7]$ cd
+[nchen@sol41 ~]$ exit
+exit
+Script done, file is typescript
+
+
